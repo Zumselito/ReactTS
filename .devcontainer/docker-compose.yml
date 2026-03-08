@@ -1,8 +1,15 @@
 services:
-  frontend:
+  base:
     build:
-      context: ../frontend
+      context: ../base
       dockerfile: Dockerfile
     volumes:
       - ..:/workspaces:cached
+    command: /bin/sh -c "while sleep 1000; do :; done"
+  note-app-1:
+    build:
+      context: ../note-app-1
+      dockerfile: Dockerfile
+    volumes:
+      - ../note-app-1:/workspaces/note-app-1:cached
     command: /bin/sh -c "while sleep 1000; do :; done"

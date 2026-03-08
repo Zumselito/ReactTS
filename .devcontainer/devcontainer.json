@@ -1,18 +1,16 @@
 {
-	"name": "ReactTS",
+	"name": "ReactTS-Showcases",
   "dockerComposeFile": "docker-compose.yml",
-  "service": "frontend",
+  "service": "base",
   "workspaceFolder": "/workspaces",
-  "forwardPorts": [3000],
+  "forwardPorts": [5173],
   "customizations": {
     "vscode": {
       "extensions": [
         "dbaeumer.vscode-eslint",
         "esbenp.prettier-vscode",
-        "ms-azuretools.vscode-docker"
+        "ms-azuretools.vscode-containers"
       ]
     }
-  },
-  "remoteUser": "node",
-  "containerUser": "node"
+  }
 }
